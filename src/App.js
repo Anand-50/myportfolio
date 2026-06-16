@@ -52,7 +52,7 @@ function useOnScreen(options = { threshold: 0.15 }) {
     }, options);
     obs.observe(el);
     return () => obs.disconnect();
-  }, []);
+  }, [options]);
   return [ref, visible];
 }
 
